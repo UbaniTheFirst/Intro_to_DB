@@ -5,10 +5,10 @@ def create_database():
     """Create the alx_book_store database if it doesn't exist."""
     connection = None
     try:
-        # Connect to MySQL server - UPDATE THESE CREDENTIALS
+        # Connect to MySQL server
         connection = mysql.connector.connect(
             host='localhost',
-            user='root',  # Your MySQL username
+            user='root',
             password='!Netbeans007SQL'  # Replace with your actual MySQL password
         )
         
@@ -20,7 +20,7 @@ def create_database():
             
             print("Database 'alx_book_store' created successfully!")
             
-    except Error as e:
+    except mysql.connector.Error as e:
         print(f"Error while connecting to MySQL: {e}")
         
     finally:
